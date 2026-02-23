@@ -5,35 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel Beale | CS499 ePortfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
+    html, body {
+      margin: 0;
+      padding: 0;
       background-color: #f0f4f8;
+      color: #222;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
     }
-    h1, h2 {
-      margin-top: 1.5em;
+
+    .page {
+      max-width: 980px;
+      margin: 32px auto;
+      padding: 0 18px 36px;
     }
-    .note {
-      background: #f6f8fa;
-      border-left: 4px solid #0969da;
-      padding: 12px 14px;
-      margin: 16px 0;
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #d9e1ea;
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
-    ul {
-      padding-left: 20px;
+
+    .hero {
+      text-align: center;
+      padding: 28px 22px;
     }
-    li {
-      margin: 6px 0;
+
+    .hero h1 {
+      margin: 0 0 8px 0;
+      font-size: 2rem;
     }
-    code {
-      background: #f6f8fa;
-      padding: 2px 5px;
-      border-radius: 4px;
+
+    .hero p {
+      margin: 0;
+      color: #4a5568;
     }
+
+    h2 {
+      margin: 0 0 12px 0;
+      font-size: 1.35rem;
+      color: #1f2937;
+    }
+
+    h3 {
+      margin: 18px 0 8px 0;
+      font-size: 1.05rem;
+      color: #1f2937;
+    }
+
+    p {
+      margin: 0 0 12px 0;
+    }
+
     .readme-box {
       background: #fafafa;
       border: 1px solid #ddd;
@@ -41,15 +67,117 @@
       border-radius: 8px;
       white-space: pre-wrap;
     }
+
+    .note {
+      background: #eef6ff;
+      border-left: 4px solid #0969da;
+      padding: 12px 14px;
+      margin: 12px 0 0 0;
+      border-radius: 6px;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .nav-grid a {
+      display: block;
+      background: #f8fafc;
+      border: 1px solid #dbe4ee;
+      border-radius: 8px;
+      padding: 10px 12px;
+      text-decoration: none;
+      color: #0b57d0;
+      font-weight: 600;
+    }
+
+    .nav-grid a:hover {
+      background: #eef4ff;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .mini-card {
+      background: #fcfcfd;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .mini-card h3 {
+      margin-top: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    a {
+      color: #0b57d0;
+    }
+
+    .file-group + .file-group {
+      margin-top: 16px;
+    }
+
+    .file-group h3 {
+      margin-bottom: 6px;
+    }
+
+    .small {
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    .center-text {
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1 class="center-text">Daniel Beale | CS499 ePortfolio</h1>
-  <p>Welcome to my CS499 ePortfolio website. This page provides quick access to my README, milestone narratives, and project files.</p>
+  <div class="page">
 
-  <h2>Self-Assessment</h2>
-  
-  <div class="readme-box">
+    <section class="card hero">
+      <h1>Daniel Beale | CS499 ePortfolio</h1>
+      <p>Computer Science Capstone ePortfolio showcasing growth in software design and engineering, algorithms and data structures, and databases.</p>
+    </section>
+
+    <section class="card">
+      <h2>Site Navigation</h2>
+      <p class="small">Use these links to jump to each section of the ePortfolio.</p>
+      <div class="nav-grid">
+        <a href="#enhancement1">Enhancement 1: Software Design and Engineering</a>
+        <a href="#enhancement2">Enhancement 2: Algorithms and Data Structure</a>
+        <a href="#enhancement3">Enhancement 3: Databases</a>
+        <a href="#artifacts-files">Artifacts and Files</a>
+      </div>
+    </section>
+
+    <section class="card" id="self-assessment">
+      <h2>Professional Self-Assessment</h2>
+      <div class="readme-box">
 Completing the Computer Science program and building this ePortfolio has helped me define who I am as a developing software professional and how I want to contribute in the field. Across the program, I strengthened my ability to move from requirements to implementation, testing, and reflection, and the capstone process pushed me to present that work at a professional standard. The ePortfolio shows how I approach problems, how I improve earlier work, and how I apply software engineering, algorithms, databases, and security practices in a way that creates usable and maintainable solutions. Developing this portfolio also helped me clarify my professional values. I care about building systems that are reliable, understandable, and secure, and I want my work to be useful to both technical and nontechnical audiences.
 
 My coursework gave me repeated opportunities to build these strengths in different contexts. In software design and engineering, I worked on projects that required planning, modular development, and iterative improvement. In databases, I learned how application behavior depends on the quality of data modeling, query design, and validation. In algorithm-focused work, I learned to evaluate how efficiently and clearly a solution solves the problem. In security-related work, I developed a stronger habit of looking for weaknesses early, including unsafe assumptions, poor validation, and design choices that could expose data or create instability. The capstone made these lessons more concrete because I had to revisit a prior project, evaluate it critically, and improve it in ways that demonstrate professional growth.
@@ -65,63 +193,85 @@ Security is another area that became more important to me as I progressed throug
 As a whole, the artifacts in this ePortfolio are connected by a common theme of growth through refinement. They represent different areas of computer science, but together they show how I approach software as an integrated discipline. The portfolio demonstrates my development in Software Design and Engineering, Algorithms and Data Structures, and Databases, while also highlighting communication, problem solving, and security awareness across those categories. Each artifact reflects a different part of my skill set, and the accompanying narratives explain how I evaluated the original work, planned improvements, and implemented enhancements that better align with professional expectations. Taken together, these artifacts show the progression from student assignments to stronger portfolio-ready examples that represent my capabilities and readiness to contribute in a computer science role.
 
 This ePortfolio serves as both a record of what I built in the program and a professional introduction to how I think, communicate, and solve problems. It reflects the technical foundation I have developed, the standards I now apply to my work, and the direction I want to continue pursuing as I enter the field. My goal is to bring the same approach shown here to future opportunities: thoughtful design, clear communication, continuous improvement, and practical solutions that create value.
-  </div>
+      </div>
+    </section>
 
-  <h2>Enhancement 1: Software Design and Engineering</h2>
-  <div class="readme-box">
+    <section class="card" id="enhancement1">
+      <h2>Enhancement 1: Software Design and Engineering</h2>
+      <div class="readme-box">
 The artifact I selected is the Grazioso Salvare animal shelter dashboard I created for CS 340. It is a Python Dash application that displays shelter records in an interactive table and updates a chart and map based on user-selected rescue filters. The original version was developed during CS 340 as the final project and was designed around a MongoDB-backed dataset and a single-file, course-focused implementation.
-    
+
 I included this artifact in my ePortfolio because it demonstrates applied software development skills that are easy to evaluate, including UI construction, data flow from a persistence layer, and business rules that connect user input to meaningful results. I selected it because it also had clear room for professional improvement. The enhanced version refactors the code into distinct layers so the Dash layout and callbacks are separated from query building, input validation, scoring/ranking logic, and database operations. I added logging and predictable error handling so the application behaves consistently when the database is unavailable, when filters return no results, or when invalid inputs are received. I also improved security practices by moving configuration out of the code into environment-based settings, validating filter inputs to prevent unsafe query patterns, and aligning the database layer with a least-privilege approach. Finally, I added automated tests for the non-UI components to improve reliability and make the project safer to maintain.
-    
+
 These changes support the outcomes I planned to address in Module One by demonstrating professional-quality design decisions, clear separation of concerns, and technically sound implementation practices. They also strengthen the security mindset outcome through safer configuration and stricter input boundaries. I do not need major updates to my outcome-coverage plan, but this milestone is now clearly focused on software design and engineering, while later milestones can expand algorithmic depth and database-specific improvements.
-    
+
 Enhancing the artifact reinforced the importance of separating responsibilities so the application is testable and maintainable. The biggest challenge was untangling callback-driven logic from database operations without changing user-facing behavior. Adding validation boundaries and consistent failure behavior also required careful handling so the dashboard remained usable while being more secure and predictable.
-  </div>
+      </div>
+    </section>
 
-  <h2>Enhancement 2: Algorithms and Data Structure</h2>
-<div class="readme-box">
+    <section class="card" id="enhancement2">
+      <h2>Enhancement 2: Algorithms and Data Structure</h2>
+      <div class="readme-box">
 The artifact demonstrates proficiency across multiple software engineering disciplines: the RankingAlgorithm class showcases algorithmic thinking through a transparent, weighted scoring system with proper separation of concerns; the enhanced mongo_repo.py exemplifies database optimization by implementing server-side pagination and multi-field sorting; and the frozen dataclasses (MatchCriteria, BreedScore) reflect knowledge of immutable data structures for preventing bugs. The improvement from the original codebase is significant as the original had no ranking capability, no server-side pagination, and minimal test coverage. The enhancement added a complete scoring framework with 101 tests, reduced response time through database-level operations, and introduced proper data structures with comprehensive documentation. Each component is intentionally designed to be testable, maintainable, and scalable.
-  
-I successfully met the course outcome planned in Module One regarding algorithms and data structures as the primary enhancement. The scoring algorithm directly addresses the requirement to "add an enhancement that is clearly algorithmic rather than just 'filtering data'" since it implements a three-dimensional weighted scoring system (breed, age, sex) with transparent component breakdown, demonstrating both algorithmic design and appropriate data structure selection through frozen dataclasses. I also exceeded the initial scope by addressing a secondary outcome: performance optimization through server-side pagination, which wasn't explicitly planned but naturally emerged as a critical gap when evaluating the original architecture. My outcome-coverage plan is unchanged so far.
-  
+
+I successfully met the course outcome planned in Module One regarding algorithms and data structures as the primary enhancement. The scoring algorithm directly addresses the requirement to add an enhancement that is clearly algorithmic rather than just filtering data since it implements a three-dimensional weighted scoring system (breed, age, sex) with transparent component breakdown, demonstrating both algorithmic design and appropriate data structure selection through frozen dataclasses. I also exceeded the initial scope by addressing a secondary outcome: performance optimization through server-side pagination, which was not explicitly planned but naturally emerged as a critical gap when evaluating the original architecture. My outcome-coverage plan is unchanged so far.
+
 Building this enhancement showed me that designing the data structures first made everything cleaner. The hardest part was testing edge cases because small off-by-one issues could slip through. Iterating on the scoring weights helped keep it explainable and writing 101 tests pushed me to handle failure cases like missing or invalid data.
-  </div>
-  
-  <h2>Enhancement 3: Databases</h2>
-<div class="readme-box">
-I successfully met the course outcome planned in Module One regarding databases as the primary enhancement. Refactoring the dashboard into clearer layers, adding server-side pagination/sorting, implementing a ranking algorithm, and strengthening the database layer with validation, aggregations, and indexing all provide direct evidence of those goals.
-  
-Enhancing the artifact reinforced how much maintainability and reliability depend on structure. Separating UI, service logic, and database access made the system easier to reason about and made testing possible without relying on the Dash layer. I also learned that performance improvements are often design choices like moving sorting, pagination, and rollups into the database reduces UI work and scales better. The main challenges were untangling the original callback-driven code without changing user-facing behavior and ensuring the new validation and sanitization logic handled messy or incomplete records without breaking the dashboard’s components.
-  </div>
-  
-  <h2>Main Project Files</h2>
-  <ul>
-    <li><a href="ProjectTwoDashboard%20(1).ipynb">ProjectTwoDashboard (1).ipynb</a></li>
-    <li><a href="app.py">app.py</a></li>
-    <li><a href="db_setup.js">db_setup.js</a></li>
-    <li><a href="logging_config.py">logging_config.py</a></li>
-  </ul>
+      </div>
+    </section>
 
-  <h2>Data File</h2>
-  <ul>
-    <li><a href="mongo_repo.py">mongo_repo.py</a></li>
-  </ul>
-  
-  <h2>Services Files</h2>
-  <ul>
-    <li><a href="query_service.py">query_service.py</a></li>
-    <li><a href="ranking_service.py">ranking_service.py</a></li>
-    <li><a href="result_service.py">result_service.py</a></li>
-  </ul>
-  
-  <h2>Test Files</h2>
-  <ul>
-    <li><a href="test_mongo_repo_aggregations.py">test_mongo_repo_aggregations.py</a></li>
-    <li><a href="test_mongo_repo_unit.py">test_mongo_repo_unit.py</a></li>
-    <li><a href="test_query_service.py">test_query_service.py</a></li>
-    <li><a href="test_ranking_service.py">test_ranking_service.py</a></li>
-    <li><a href="test_result_service.py">test_result_service.py</a></li>
-  </ul>
+    <section class="card" id="enhancement3">
+      <h2>Enhancement 3: Databases</h2>
+      <div class="readme-box">
+I successfully met the course outcome planned in Module One regarding databases as the primary enhancement. Refactoring the dashboard into clearer layers, adding server-side pagination and sorting, implementing a ranking algorithm, and strengthening the database layer with validation, aggregations, and indexing all provide direct evidence of those goals.
 
+Enhancing the artifact reinforced how much maintainability and reliability depend on structure. Separating UI, service logic, and database access made the system easier to reason about and made testing possible without relying on the Dash layer. I also learned that performance improvements are often design choices. Moving sorting, pagination, and rollups into the database reduces UI work and scales better. The main challenges were untangling the original callback-driven code without changing user-facing behavior and ensuring the new validation and sanitization logic handled messy or incomplete records without breaking the dashboard components.
+      </div>
+    </section>
+
+    <section class="card" id="artifacts-files">
+      <h2>Artifacts and Supporting Files</h2>
+      <p class="small">These files support the original artifact, enhanced implementation, and testing evidence referenced in the narratives.</p>
+
+      <div class="file-group">
+        <h3>Main Project Files</h3>
+        <ul>
+          <li><a href="ProjectTwoDashboard%20(1).ipynb">ProjectTwoDashboard (1).ipynb</a></li>
+          <li><a href="OriginalArtifact.py">OriginalArtifact.py</a></li>
+          <li><a href="app.py">app.py</a></li>
+          <li><a href="db_setup.js">db_setup.js</a></li>
+          <li><a href="logging_config.py">logging_config.py</a></li>
+        </ul>
+      </div>
+
+      <div class="file-group">
+        <h3>Database Layer</h3>
+        <ul>
+          <li><a href="mongo_repo.py">mongo_repo.py</a></li>
+        </ul>
+      </div>
+
+      <div class="file-group">
+        <h3>Service Files</h3>
+        <ul>
+          <li><a href="query_service.py">query_service.py</a></li>
+          <li><a href="ranking_service.py">ranking_service.py</a></li>
+          <li><a href="result_service.py">result_service.py</a></li>
+        </ul>
+      </div>
+
+      <div class="file-group">
+        <h3>Test Files</h3>
+        <ul>
+          <li><a href="test_mongo_repo_aggregations.py">test_mongo_repo_aggregations.py</a></li>
+          <li><a href="test_mongo_repo_unit.py">test_mongo_repo_unit.py</a></li>
+          <li><a href="test_query_service.py">test_query_service.py</a></li>
+          <li><a href="test_ranking_service.py">test_ranking_service.py</a></li>
+          <li><a href="test_result_service.py">test_result_service.py</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
 </body>
 </html>
